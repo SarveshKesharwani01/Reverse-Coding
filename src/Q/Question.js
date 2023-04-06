@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Calculate1 } from "../Logic/S1Q1";
 import { Calculate2 } from "../Logic/S1Q2";
 import React from "react";
