@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Calculate1 } from "../Logic/S1Q1";
 import { Calculate2 } from "../Logic/S1Q2";
 import React from "react";
+import { Calculate3 } from "../Logic/S1Q3";
 const Question = () => {
   const [answer, setAnswer] = useState(null);
   const [warning, setWarning] = useState(false);
@@ -26,16 +27,7 @@ const Question = () => {
     } else if (qnum === "2") {
       setAnswer(Calculate2(val));
     } else if (qnum === "3") {
-      let output = "";
-      for (let i = 0; i < val.length; i++) {
-        if (val[i] === "1") output += "0";
-        else output += "1";
-      }
-      function reverseString(str) {
-        return str.split("").reverse().join("");
-      }
-      output = reverseString(output);
-      setAnswer(output);
+      setAnswer(Calculate3(val));
     } else if (qnum === "4") {
     } else if (qnum === "5") {
     }

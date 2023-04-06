@@ -1,0 +1,12 @@
+export const Calculate3 = (val) => {
+  let output = "";
+  for (let i = 0; i < val.length; i++) {
+    if (val[i] === "1") output += "0";
+    else output += "1";
+  }
+  function reverseString(str) {
+    return str.split("").reverse().join("");
+  }
+  output = reverseString(output);
+  return output;
+};
