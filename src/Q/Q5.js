@@ -4,7 +4,7 @@ export const Q5 = (val) => {
   if (val[0] % 2) return IP;
   if (val[0] < 4) return IP;
   let sum = 0;
-  for (let i = 0; i < val.length; i += 2) {
+  for (let i = 1; i < val.length; i += 2) {
     sum += val[i] ^ val[i + 1];
   }
   return sum;
