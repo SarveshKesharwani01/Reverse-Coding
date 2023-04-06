@@ -1,7 +1,8 @@
-export const Calculate2 = (val) => {
+export const Q2 = (val) => {
+  // Given a string, check if count of letters is in incremental form. Abbccc -> yes, aabbcc->no, baaccc->yes
     let freq = {};
       for (let i = 0; i < val.length; i++) {
-        let char = val.charAt(i).toLowerCase();
+        let char = val.charAt(i);
         if (freq[char]) freq[char]++;
         else freq[char] = 1;
       }

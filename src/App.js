@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Question from "./Q/Question";
-import Slot1 from "./Q/Slot1";
-import Slot2 from "./Q/Slot2";
-import Slot3 from "./Q/Slot3";
-import Slot4 from "./Q/Slot4";
-import Slot5 from "./Q/Slot5";
-import Slot6 from "./Q/Slot6";
-import Slot7 from "./Q/Slot7";
-import Slot8 from "./Q/Slot8";
-import FinalRound from "./Q/FinalRound";
+import Question1 from "./SlotQuestion/Question1";
+import Slot1 from "./Slots/Slot1";
+// import Slot2 from "./Slots/Slot2";
+// import Slot3 from "./Slots/Slot3";
+// import Slot4 from "./Slots/Slot4";
+// import Slot5 from "./Slots/Slot5";
+// import Slot6 from "./Slots/Slot6";
+// import Slot7 from "./Slots/Slot7";
+// import Slot8 from "./Slots/Slot8";
+// import FinalRound from "./Q/FinalRound";
 import Welcome from "./Welcome";
 function App() {
   // const navigate = useNavigate();
@@ -22,9 +22,9 @@ function App() {
           <Route path="/round1/slot13bU6xKpR9j" element={<Slot1 />}></Route>
           <Route
             path="/round1/slot13bU6xKpR9j/:id"
-            element={<Question />}
+            element={<Question1 />}
           ></Route>
-          <Route path="/round1/slot27cE2hLmN5v" element={<Slot2 />}></Route>
+          {/* <Route path="/round1/slot27cE2hLmN5v" element={<Slot2 />}></Route>
           <Route
             path="/round1/slot27cE2hLmN5v/:id"
             element={<Question />}
@@ -63,7 +63,7 @@ function App() {
           <Route
             path="/finalround4vT9nGpJ7k/:id"
             element={<Question />}
-          ></Route>
+          ></Route> */}
         </Routes>
       </Router>
     </>

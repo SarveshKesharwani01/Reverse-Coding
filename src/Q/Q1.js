@@ -1,5 +1,5 @@
-export const Calculate1 = (val) => {
-  val = Number(val);
+export const Q1 = (val) => {
+  //Convert number to trinary
   let curr = "";
   if (val === 0) curr = "0";
   while (val > 0) {
