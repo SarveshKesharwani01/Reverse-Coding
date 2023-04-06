@@ -8,7 +8,7 @@ const Question = () => {
   const [value, setValue] = useState("");
   const inputref = useRef(null);
   const path = window.location.pathname;
-  const slot = path.substring(12, 13);
+  // const slot = path.substring(12, 13);
   const qnum = path.substring(32);
   // console.log(slot, qnum);
   const logic = () => {
