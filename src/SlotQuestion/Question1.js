@@ -1,5 +1,5 @@
 import { useRef, useState, React, useEffect } from "react";
-import { ReactDOM } from "react-dom/client";
+// import { ReactDOM } from "react-dom/client";
 import { Q1 } from "../Q/Q1";
 import { Q2 } from "../Q/Q2";
 import { Q3 } from "../Q/Q3";
