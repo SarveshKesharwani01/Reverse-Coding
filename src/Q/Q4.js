@@ -1,7 +1,7 @@
 export const Q4 = (val) => {
   // Check if input array is a mountain with one peak. Like, 1 2 1->yes, 1 2 2 ->no
   if (val[0] < 3) {
-    return "INVALID INPUT";
+    return "NO";
   }
   let peak = 10;
   for (let i = 2; i < val.length - 1; i++) {
