@@ -1,0 +1,8 @@
+.display_linebreak {
+  white-space: pre-line;
+}
+
+.output {
+  border: 3px solid black;
+  height: 1rem;
+}

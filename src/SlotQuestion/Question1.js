@@ -1,4 +1,5 @@
-import { useRef, useState, React } from "react";
+import { useRef, useState, React, useEffect } from "react";
+import { ReactDOM } from "react-dom/client";
 import { Q1 } from "../Q/Q1";
 import { Q2 } from "../Q/Q2";
 import { Q3 } from "../Q/Q3";
@@ -26,10 +27,12 @@ import { CheckIsIntegerArray } from "../Logic/CheckIsIntegerArray";
 import { CheckIsTwoInteger } from "../Logic/CheckIsTwoInteger";
 import { CheckIsThreeInteger } from "../Logic/CheckIsThreeInteger";
 import { CheckIsNumberString } from "../Logic/CheckIsNumberString";
+import styles from "../styles/question.module.css";
 const Question = () => {
   const [answer, setAnswer] = useState(null);
   const [warning, setWarning] = useState(false);
   const [value, setValue] = useState("");
+  const [constraint, setConstraint] = useState("");
   const inputref = useRef(null);
   const path = window.location.pathname;
   const IP = "INVALID INPUT";
@@ -135,13 +138,68 @@ const Question = () => {
     }, 2000);
   }
 
+  useEffect(() => {
+    if (qnum === "1") {
+      setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
+    } else if (qnum === "2") {
+      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+    } else if (qnum === "3") {
+      setConstraint("Enter a binary String 'B' \n 0<=|B|<=1e6");
+    } else if (qnum === "4") {
+      setConstraint(
+        "Enter an non-negative integer array 'A' \n 1<=|A|<=1e5 \n 0<=|A[i]|<=1e9"
+      );
+    } else if (qnum === "5") {
+      setConstraint(
+        "Enter an non-negative even integer array 'A' \n 4<=|A|<=1e6 \n |A| % 2 = 0 \n 0<=A[i]<=1e9 "
+      );
+    } else if (qnum === "6") {
+      setConstraint(
+        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
+      );
+    } else if (qnum === "7") {
+      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+    } else if (qnum === "8") {
+      setConstraint("Enter a positive integer 'N' \n 1<=N<=9000");
+    } else if (qnum === "9") {
+      setConstraint(
+        "Enter an non-negative integer array 'A' \n 2<=|A|<=1e5 \n 0<=A[i]<=1e9"
+      );
+    } else if (qnum === "10") {
+      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+    } else if (qnum === "11") {
+      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+    } else if (qnum === "12") {
+      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+    } else if (qnum === "13") {
+      setConstraint(
+        "Enter three non-negative integers 'A', 'B', 'C' \n 0<=A,B,C<=1e9"
+      );
+    } else if (qnum === "14") {
+      setConstraint(
+        "Enter a string of digits 'S' \n 1<=|S|<=1e5 \n '0'<=S[i]<='9'"
+      );
+    } else if (qnum === "15") {
+      setConstraint(
+        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
+      );
+    } else if (qnum === "16") {
+      setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
+    } else if (qnum === "17") {
+    } else if (qnum === "18") {
+    } else if (qnum === "19") {
+    } else if (qnum === "20") {
+    }
+  }, [qnum]);
+
   const formSubmit = (event) => {
     event.preventDefault();
   };
   return (
     <div>
+      <div>Question {qnum}</div>
       <form onSubmit={formSubmit}>
-        <div></div>
+        <div className={styles.display_linebreak}>{constraint}</div>
         <input
           type="text"
           value={value}
@@ -151,9 +209,9 @@ const Question = () => {
         <button type="submit" onClick={logic}>
           Submit
         </button>
-        <div>{warning ? "Empty input" : ""}</div>
+        {/* <div>{warning ? "Empty input" : ""}</div> */}
       </form>
-      <div>{answer}</div>
+      <div className={styles.output}>{warning ? "EMPTY INPUT" : answer}</div>
     </div>
   );
 };
