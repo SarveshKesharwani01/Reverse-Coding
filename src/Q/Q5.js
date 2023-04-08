@@ -9,3 +9,15 @@ export const Q5 = (val) => {
   }
   return sum;
 };
+
+/*
+const boolAnswer = CheckIsIntegerArray(val);
+      if (boolAnswer !== null) setAnswer(Q5(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint(
+        "Enter an non-negative even integer array 'A' \n 4<=|A|<=1e6 \n |A| % 2 = 0 \n 0<=A[i]<=1e9 "
+      );
+      */

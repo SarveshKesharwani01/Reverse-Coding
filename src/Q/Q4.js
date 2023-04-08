@@ -31,3 +31,14 @@ export const Q4 = (val) => {
   if (peak === 1) return "YES";
   else return "NO";
 };
+
+/* const boolAnswer = CheckIsIntegerArray(val);
+      if (boolAnswer !== null) setAnswer(Q4(boolAnswer));
+      else setAnswer(IP);
+*/
+
+/*
+setConstraint(
+        "Enter an integer 'N' which is size of the array and an non-negative integer array 'A' \n 1<=N<=1e5 \n 0<=A[i]<=1e9"
+      );
+      */

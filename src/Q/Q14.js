@@ -10,3 +10,14 @@ export const Q14 = (val) => {
   }
   return sum;
 };
+/*
+const boolAnswer = CheckIsNumberString(val);
+      if (boolAnswer !== null) setAnswer(Q14(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint(
+        "Enter a string of digits 'S' \n 1<=|S|<=1e5 \n '0'<=S[i]<='9'"
+      );
+*/

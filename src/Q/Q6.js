@@ -8,3 +8,14 @@ export const Q6 = (val) => {
   val[0] = parseInt(num, 2);
   return val[0] | val[1];
 };
+/*
+const boolAnswer = CheckIsTwoInteger(val);
+      if (boolAnswer !== null) setAnswer(Q6(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint(
+        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
+      );
+      */

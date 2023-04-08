@@ -30,3 +30,13 @@ export const Q16 = (val) => {
   }
   return answer;
 };
+
+/*
+const boolAnswer = CheckIsInteger(val);
+      if (boolAnswer !== null) setAnswer(Q16(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
+*/

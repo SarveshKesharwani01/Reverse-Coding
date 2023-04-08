@@ -1,6 +1,7 @@
 export const Q2 = (val) => {
   // Given a string, check if count of letters is in incremental form. Abbccc -> yes, aabbcc->no, baaccc->yes
   let freq = {};
+  if (val.length > 100000) return "INVALID INPUT";  
   for (let i = 0; i < val.length; i++) {
     let char = val.charAt(i);
     if (freq[char]) freq[char]++;
@@ -21,3 +22,17 @@ export const Q2 = (val) => {
   if (ok) return "YES";
   else return "NO";
 };
+
+/*
+      const boolAnswer = CheckIsString(val);
+       if (boolAnswer !== null) setAnswer(Q2(boolAnswer));
+       else setAnswer(IP);
+*/
+/*
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print 'YES' OR 'NO' ");
+      setConstraint("1 ≤ |S| ≤ 1e5");
+
+*/

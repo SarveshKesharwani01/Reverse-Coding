@@ -9,3 +9,13 @@ export const Q7 = (val) => {
   }
   return sum;
 };
+
+/*
+const boolAnswer = CheckIsString(val);
+      if (boolAnswer !== null) setAnswer(Q7(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+*/

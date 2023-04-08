@@ -17,3 +17,15 @@ export const Q9 = (val) => {
     return sum + 1;
   }
 };
+
+/*
+const boolAnswer = CheckIsIntegerArray(val);
+      if (boolAnswer !== null) setAnswer(Q9(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint(
+        "Enter an non-negative integer array 'A' \n 2<=|A|<=1e5 \n 0<=A[i]<=1e9"
+      );
+      */

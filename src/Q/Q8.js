@@ -20,3 +20,13 @@ export const Q8 = (val) => {
   }
   return sum;
 };
+
+/*
+const boolAnswer = CheckIsInteger(val);
+      if (boolAnswer !== null) setAnswer(Q8(boolAnswer));
+      else setAnswer(IP);
+      */
+
+/*
+setConstraint("Enter a positive integer 'N' \n 1<=N<=9000");
+*/

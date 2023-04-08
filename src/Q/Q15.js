@@ -11,3 +11,13 @@ export const Q15 = (val) => {
     return "NO";
   }
 };
+/*
+const boolAnswer = CheckIsTwoInteger(val);
+      if (boolAnswer !== null) setAnswer(Q15(boolAnswer));
+      else setAnswer(IP);
+      */
+/*
+ setConstraint(
+        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
+      );
+*/

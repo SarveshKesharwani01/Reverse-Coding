@@ -5,3 +5,13 @@ export const Q12 = (val) => {
   }
   return ans;
 };
+
+/*
+const boolAnswer = CheckIsString(val);
+      if (boolAnswer !== null) setAnswer(Q12(boolAnswer));
+      else setAnswer(IP);
+      */
+     
+/*
+setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+*/

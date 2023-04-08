@@ -33,6 +33,8 @@ const Question = () => {
   const [warning, setWarning] = useState(false);
   const [value, setValue] = useState("");
   const [constraint, setConstraint] = useState("");
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
   const inputref = useRef(null);
   const path = window.location.pathname;
   const IP = "INVALID INPUT";
@@ -114,7 +116,7 @@ const Question = () => {
       if (boolAnswer !== null) setAnswer(Q16(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "17") {
-      const boolAnswer = CheckIsString(val);
+      const boolAnswer = CheckIsThreeInteger(val);
       if (boolAnswer !== null) setAnswer(Q17(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "18") {
@@ -140,15 +142,27 @@ const Question = () => {
 
   useEffect(() => {
     if (qnum === "1") {
-      setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
-    } else if (qnum === "2") {
-      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
-    } else if (qnum === "3") {
-      setConstraint("Enter a binary String 'B' \n 0<=|B|<=1e6");
-    } else if (qnum === "4") {
-      setConstraint(
-        "Enter an integer 'N' which is size of the array and an non-negative integer array 'A' \n 1<=N<=1e5 \n 0<=A[i]<=1e9"
+      setInput("A single line consists one integer N");
+      setOutput(
+        "Print a single string with characters ranging between '0' to '9'"
       );
+      setConstraint("0 ≤ N ≤ 1e9");
+    } else if (qnum === "2") {
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print 'YES' OR 'NO' ");
+      setConstraint("1 ≤ |S| ≤ 1e5");
+    } else if (qnum === "3") {
+      setInput("A single string S consisting of '0's and '1's");
+      setOutput("Print a single string consisting '0's and '1's");
+      setConstraint("1 ≤ |S| ≤ 1e5");
+    } else if (qnum === "4") {
+      setInput(
+        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+      );
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "5") {
       setConstraint(
         "Enter an non-negative even integer array 'A' \n 4<=|A|<=1e6 \n |A| % 2 = 0 \n 0<=A[i]<=1e9 "
@@ -196,22 +210,38 @@ const Question = () => {
     event.preventDefault();
   };
   return (
-    <div>
-      <div>Question {qnum}</div>
-      <form onSubmit={formSubmit}>
-        <div className={styles.display_linebreak}>{constraint}</div>
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          ref={inputref}
-        ></input>
-        <button type="submit" onClick={logic}>
-          Submit
-        </button>
-        {/* <div>{warning ? "Empty input" : ""}</div> */}
-      </form>
-      <div className={styles.output}>{warning ? "EMPTY INPUT" : answer}</div>
+    <div className={styles.container}>
+      <div className={styles.question_number}>Question {qnum}</div>
+      <div className={styles.constraints}>
+        <div className={styles.big_input_box}>
+          <div className={styles.input_constraint}>INPUT :</div>
+          <div className={styles.input_constraint}>{input}</div>
+        </div>
+        <div className={styles.output_constraint}>Output: {output}</div>
+        <div className={styles.input_title}>Contraint: {constraint}</div>
+      </div>
+      <div className={styles.form}>
+        <form onSubmit={formSubmit}>
+          <input
+            type="text"
+            className={styles.input_box}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            ref={inputref}
+          ></input>
+          <button
+            className={styles.submit_button}
+            type="submit"
+            onClick={logic}
+          >
+            Submit
+          </button>
+          {/* <div>{warning ? "Empty input" : ""}</div> */}
+        </form>
+        <div className={styles.output_box}>
+          {warning ? "EMPTY INPUT" : answer}
+        </div>
+      </div>
     </div>
   );
 };
