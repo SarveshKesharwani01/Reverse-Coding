@@ -1,4 +1,5 @@
 export const Q14 = (val) => {
+  if (val.length > 1e5) return "INVALID INPUT";
   let sum = 100000000000;
   while (sum >= 10) {
     let cnt = 0;
@@ -17,7 +18,7 @@ const boolAnswer = CheckIsNumberString(val);
       */
 
 /*
-setConstraint(
-        "Enter a string of digits 'S' \n 1<=|S|<=1e5 \n '0'<=S[i]<='9'"
-      );
+      setInput("A string S consisting of digits '0' to '9' ");
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ |S| ≤ 1e5");
 */

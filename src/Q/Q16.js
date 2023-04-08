@@ -1,5 +1,7 @@
 export const Q16 = (val) => {
   let mp = {};
+  if (val < 2) return "INVALID INPUT";
+  else if (val > 1e9) return "INVALID INPUT";
   while (val % 2 === 0) {
     val /= 2;
     if (mp[2]) mp[2]++;
@@ -38,5 +40,7 @@ const boolAnswer = CheckIsInteger(val);
       */
 
 /*
-setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
+      setInput("A single line consisting of an integer A");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("2 ≤ A ≤ 1e9");
 */

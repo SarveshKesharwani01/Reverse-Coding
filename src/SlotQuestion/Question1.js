@@ -174,35 +174,65 @@ const Question = () => {
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "7") {
-      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print a single integer");
+      setConstraint("0 ≤ |S| ≤ 1e5");
     } else if (qnum === "8") {
-      setConstraint("Enter a positive integer 'N' \n 1<=N<=9000");
+      setInput("A single line consists of an integer N");
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ N ≤ 1e9");
     } else if (qnum === "9") {
-      setConstraint(
-        "Enter an non-negative integer array 'A' \n 2<=|A|<=1e5 \n 0<=A[i]<=1e9"
+      setInput(
+        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
       );
+      setOutput("Print a single integer");
+      setConstraint("2 ≤ n ≤ 1e5 \n0 ≤ A[i] ≤ 1e9, for all i");
     } else if (qnum === "10") {
-      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "11") {
-      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "12") {
-      setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print a single string");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "13") {
-      setConstraint(
-        "Enter three non-negative integers 'A', 'B', 'C' \n 0<=A,B,C<=1e9"
-      );
+      setInput("A single line consists of three integers A,B,C");
+      setOutput("Print a single integer");
+      setConstraint("0 ≤ A, B, C ≤ 1e9");
     } else if (qnum === "14") {
-      setConstraint(
-        "Enter a string of digits 'S' \n 1<=|S|<=1e5 \n '0'<=S[i]<='9'"
-      );
+      setInput("A string S consisting of digits '0' to '9' ");
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "15") {
-      setConstraint(
-        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
-      );
+      setInput("A single line consisting of two integers A and B");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "16") {
-      setConstraint("Enter a non-negative integer 'N' \n 0<=N<=1e9 ");
+      setInput("A single line consisting of an integer A");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("2 ≤ A ≤ 1e9");
     } else if (qnum === "17") {
+      setInput("A single line consists of three integers A,B,C");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("0 ≤ A, B, C ≤ 1e6");
     } else if (qnum === "18") {
+      setInput(
+        "A string S consisting of lowercase letter of English alphabet."
+      );
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "19") {
     } else if (qnum === "20") {
     }

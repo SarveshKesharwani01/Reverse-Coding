@@ -1,4 +1,5 @@
 export const Q15 = (val) => {
+  if (val[0] > 1e9 || val[1] > 1e9) return "INVALID INPUT";
   const num1 = val[0].toString(2),
     num2 = val[1].toString(2);
   let cnt1 = 0,
@@ -17,7 +18,7 @@ const boolAnswer = CheckIsTwoInteger(val);
       else setAnswer(IP);
       */
 /*
- setConstraint(
-        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
-      );
+      setInput("A single line consisting of two integers A and B");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("0 ≤ A, B ≤ 1e9");
 */

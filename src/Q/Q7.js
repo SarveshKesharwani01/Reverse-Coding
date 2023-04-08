@@ -1,5 +1,6 @@
 export const Q7 = (val) => {
   let sum = 0;
+  if (val.length > 100000) return "INVALID INPUT";
   for (let i = 0; i < val.length; i++) {
     if (i % 2 === 0) {
       sum += (val.charCodeAt(i) - 97) % 10;
@@ -17,5 +18,7 @@ const boolAnswer = CheckIsString(val);
       */
 
 /*
-setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput("A single string S consisting of lowercase letter of English Alphabets.");
+      setOutput("Print a single integer");
+      setConstraint("0 ≤ |S| ≤ 1e5");
 */

@@ -1,4 +1,5 @@
 export const Q11 = (val) => {
+  if (val.length > 1e5) return "INVALID INPUT";
   let alpha = "abcdefghijklmnopqrstquvxyz";
   let ans = "";
   for (let i = 0; i < val.length; i++) {
@@ -19,5 +20,9 @@ const boolAnswer = CheckIsString(val);
       else setAnswer(IP);
       */
 /*
-setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
+      setInput(
+        "A single string S consisting of lowercase letter of English Alphabets."
+      );
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ |S| ≤ 1e5");
 */

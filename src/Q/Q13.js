@@ -1,4 +1,7 @@
 export const Q13 = (val) => {
+  for (let i = 0; i < val.length; i++) {
+    if (val[i] > 1e9) return "INVALID INPUT";
+  }
   val.sort((a, b) => {
     return a - b;
   });
@@ -12,7 +15,7 @@ const boolAnswer = CheckIsThreeInteger(val);
       else setAnswer(IP);
       */
 /*
-setConstraint(
-        "Enter three non-negative integers 'A', 'B', 'C' \n 0<=A,B,C<=1e9"
-      );
+      setInput("A single line consists of three integers A,B,C");
+      setOutput("Print a single integer");
+      setConstraint("0 ≤ A, B, C ≤ 1e9");
 */

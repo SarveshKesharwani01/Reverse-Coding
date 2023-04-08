@@ -1,4 +1,7 @@
 export const Q8 = (val) => {
+  if (val > 9000) {
+    return "INVALID INPUT";
+  }
   const N = 1e5 + 5;
   const prime = new Array(N).fill(1);
   const prime2 = [];
@@ -12,9 +15,6 @@ export const Q8 = (val) => {
     if (prime[i]) prime2.push(i);
   }
   let sum = 0;
-  if (val > 9000) {
-    return "INVALID INPUT";
-  }
   for (let i = 0; i < val; i++) {
     sum += prime2[i];
   }
@@ -28,5 +28,7 @@ const boolAnswer = CheckIsInteger(val);
       */
 
 /*
-setConstraint("Enter a positive integer 'N' \n 1<=N<=9000");
+      setInput("A single line consists of an integer N");
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ N ≤ 1e9");
 */
