@@ -147,7 +147,7 @@ const Question = () => {
       setConstraint("Enter a binary String 'B' \n 0<=|B|<=1e6");
     } else if (qnum === "4") {
       setConstraint(
-        "Enter an non-negative integer array 'A' \n 1<=|A|<=1e5 \n 0<=|A[i]|<=1e9"
+        "Enter an integer 'N' which is size of the array and an non-negative integer array 'A' \n 1<=N<=1e5 \n 0<=A[i]<=1e9"
       );
     } else if (qnum === "5") {
       setConstraint(
