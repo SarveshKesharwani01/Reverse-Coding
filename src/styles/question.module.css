@@ -21,9 +21,12 @@
   height: auto;
 }
 
-.input_constraint,
-.output_constraint,
-.input_title {
+.input_constraint1,
+.input_constraint2,
+.output_constraint1,
+.output_constraint2,
+.input_title1,
+.input_title2 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -33,12 +36,22 @@
   white-space: pre-line;
 } */
 
-.input_constraint {
+.input_constraint2 {
+  color: #2196f3;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.input_constraint1 {
   color: #2196f3;
 }
 
-.output_constraint {
+.output_constraint1 {
   color: #4caf50;
+}
+.output_constraint2 {
+  color: #4caf50;
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 
 .input_box {
@@ -99,30 +112,25 @@ form {
   padding-bottom: 20px;
 }
 
-/* input[type="text"] {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.input_title2{
+    white-space: pre-line;
 }
-
-button[type="submit"] {
-  width: 100px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-  background-color: #0062cc;
-} */
 
 .big_input_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.big_output_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.big_input_title {
   display: flex;
   justify-content: space-between;
   gap: 20px;

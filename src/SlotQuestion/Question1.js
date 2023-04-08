@@ -164,13 +164,15 @@ const Question = () => {
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "5") {
-      setConstraint(
-        "Enter an non-negative even integer array 'A' \n 4<=|A|<=1e6 \n |A| % 2 = 0 \n 0<=A[i]<=1e9 "
+      setInput(
+        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
       );
+      setOutput("Print a single integer");
+      setConstraint("2 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "6") {
-      setConstraint(
-        "Enter two non-negative integers 'A' and 'B' \n 0<=A,B<=1e9"
-      );
+      setInput("A single line consists of 2 integers A and B ");
+      setOutput("Print a single integer");
+      setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "7") {
       setConstraint("Enter a string 'S' \n 0<=|S|<=1e6");
     } else if (qnum === "8") {
@@ -214,11 +216,17 @@ const Question = () => {
       <div className={styles.question_number}>Question {qnum}</div>
       <div className={styles.constraints}>
         <div className={styles.big_input_box}>
-          <div className={styles.input_constraint}>INPUT :</div>
-          <div className={styles.input_constraint}>{input}</div>
+          <div className={styles.input_constraint1}>INPUT :</div>
+          <div className={styles.input_constraint2}>{input}</div>
         </div>
-        <div className={styles.output_constraint}>Output: {output}</div>
-        <div className={styles.input_title}>Contraint: {constraint}</div>
+        <div className={styles.big_output_box}>
+          <div className={styles.output_constraint1}>Output :</div>
+          <div className={styles.output_constraint2}>{output}</div>
+        </div>
+        <div className={styles.big_input_title}>
+          <div className={styles.input_title1}>Contraint :</div>
+          <div className={styles.input_title2}>{constraint}</div>
+        </div>
       </div>
       <div className={styles.form}>
         <form onSubmit={formSubmit}>
