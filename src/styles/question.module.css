@@ -40,6 +40,7 @@
   color: #2196f3;
   word-break: break-all;
   white-space: pre-wrap;
+  text-overflow: ellipsis;  
 }
 .input_constraint1 {
   color: #2196f3;
