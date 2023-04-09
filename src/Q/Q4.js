@@ -7,7 +7,6 @@ export const Q4 = (val) => {
   if (val[0] < 3) {
     return "NO";
   }
-  let peak = 10;
   let i1 = -1,
     j1 = -1;
   for (let i = 2; i < val.length; i++) {
