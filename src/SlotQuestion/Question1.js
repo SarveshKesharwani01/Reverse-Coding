@@ -254,7 +254,7 @@ const Question = () => {
           <div className={styles.output_constraint2}>{output}</div>
         </div>
         <div className={styles.big_input_title}>
-          <div className={styles.input_title1}>Contraint :</div>
+          <div className={styles.input_title1}>Contsraint :</div>
           <div className={styles.input_title2}>{constraint}</div>
         </div>
       </div>
