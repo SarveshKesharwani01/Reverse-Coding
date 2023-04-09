@@ -1,6 +1,6 @@
 export const Q11 = (val) => {
   if (val.length > 1e5) return "INVALID INPUT";
-  let alpha = "abcdefghijklmnopqrstquvxyz";
+  let alpha = "abcdefghijklmnopqrstuvwxyz";
   let ans = "";
   for (let i = 0; i < val.length; i++) {
     const idx = val.charCodeAt(i) - 97;

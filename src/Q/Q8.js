@@ -30,5 +30,5 @@ const boolAnswer = CheckIsInteger(val);
 /*
       setInput("A single line consists of an integer N");
       setOutput("Print a single integer");
-      setConstraint("1 ≤ N ≤ 1e9");
+      setConstraint("1 ≤ N ≤ 9000");
 */

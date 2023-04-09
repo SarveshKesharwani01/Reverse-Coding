@@ -182,7 +182,7 @@ const Question = () => {
     } else if (qnum === "8") {
       setInput("A single line consists of an integer N");
       setOutput("Print a single integer");
-      setConstraint("1 ≤ N ≤ 1e9");
+      setConstraint("1 ≤ N ≤ 9000");
     } else if (qnum === "9") {
       setInput(
         "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
