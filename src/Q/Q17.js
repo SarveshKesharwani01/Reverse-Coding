@@ -27,3 +27,8 @@ else setAnswer(IP);
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B, C ≤ 1e6");
 */
+
+
+/*
+hint
+*/  

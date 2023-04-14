@@ -31,3 +31,8 @@ else setAnswer(IP);
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("1 ≤ |S| ≤ 1e5");
 */
+
+
+/*
+Hint dena hai
+*/
