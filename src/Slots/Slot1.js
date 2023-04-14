@@ -4,7 +4,7 @@ import styles from "../styles/slot.module.css";
 const Slot1 = () => {
   const navigate = useNavigate();
   const QuestionList = [];
-  for (let i = 1; i <= 18; i++) {
+  for (let i = 1; i <= 21; i++) {
     QuestionList.push(`Question${i}`);
   }
   let pathname = window.location.pathname;
@@ -20,7 +20,7 @@ const Slot1 = () => {
               key={index}
               onClick={() => navigate(`${pathname}/${question}`)}
             >
-              {question}
+              {question.substring(0, 8)} {question.substring(8)}
             </button>
           </div>
         ))}

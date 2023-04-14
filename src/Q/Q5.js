@@ -25,5 +25,5 @@ setInput(
         "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
       );
 setOutput("Print a single integer");
-setConstraint("2 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
+setConstraint("4 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
 */

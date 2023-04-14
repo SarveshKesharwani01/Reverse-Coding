@@ -35,7 +35,7 @@ export const Q4 = (val) => {
 
 /*
 setInput(
-        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
 setOutput("Print 'YES' OR 'NO'");
 setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");

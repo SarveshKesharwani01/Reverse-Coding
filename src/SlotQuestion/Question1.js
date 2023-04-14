@@ -20,6 +20,7 @@ import { Q17 } from "../Q/Q17";
 import { Q18 } from "../Q/Q18";
 import { Q19 } from "../Q/Q19";
 import { Q20 } from "../Q/Q20";
+import { Q21 } from "../Q/Q21";
 import { CheckIsInteger } from "../Logic/CheckIsInteger";
 import { CheckIsString } from "../Logic/CheckIsString";
 import { CheckIsBinaryString } from "../Logic/CheckIsBinaryString";
@@ -124,12 +125,16 @@ const Question = () => {
       if (boolAnswer !== null) setAnswer(Q18(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "19") {
-      const boolAnswer = CheckIsString(val);
+      const boolAnswer = CheckIsIntegerArray(val);
       if (boolAnswer !== null) setAnswer(Q19(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "20") {
-      const boolAnswer = CheckIsString(val);
+      const boolAnswer = CheckIsThreeInteger(val);
       if (boolAnswer !== null) setAnswer(Q20(boolAnswer));
+      else setAnswer(IP);
+    } else if (qnum === "21") {
+      const boolAnswer = CheckIsBinaryString(val);
+      if (boolAnswer !== null) setAnswer(Q21(boolAnswer));
       else setAnswer(IP);
     }
   };
@@ -168,7 +173,7 @@ const Question = () => {
         "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
       );
       setOutput("Print a single integer");
-      setConstraint("2 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
+      setConstraint("4 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "6") {
       setInput("A single line consists of 2 integers A and B ");
       setOutput("Print a single integer");
@@ -234,7 +239,21 @@ const Question = () => {
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "19") {
+      setInput(
+        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+      );
+      setOutput(
+        "Print a single string consisting of lowercase letter of English Alphabets."
+      );
+      setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "20") {
+      setInput("A single line consists of three integers A,B,C");
+      setOutput("Print 'YES' OR 'NO'");
+      setConstraint("0 ≤ A, B, C ≤ 1e6");
+    } else if (qnum === "21") {
+      setInput("A single string S consisting of '0's and '1's");
+      setOutput("Print a single string consisting '0's and '1's");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     }
   }, [qnum]);
 
