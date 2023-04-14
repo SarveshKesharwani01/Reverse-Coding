@@ -1,9 +1,62 @@
+* {
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  background-color: black;
+  background-image: url("https://i.imgur.com/4B3Yy23.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+@font-face {
+  font-family: "Prime-Regular";
+  src: url("../../fonts/Prime-Regular.ttf");
+}
+
+/* body {
+  background-image: url('https://i.imgur.com/XzhXque.png');
+  background-size: cover;
+} */
+
+.logo1 {
+  height: 120px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo2 {
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.heading {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Prime-Regular";
+  font-size: 50px;
+}
+
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  flex-direction: row;
+  margin-top: 50px;
+  height: 75vh;
+  width: 100vw;
+  justify-content: space-around;
 }
 
 .question_number {
@@ -15,7 +68,7 @@
 .constraints {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-around;
   margin-bottom: 20px;
   width: 40vw;
   height: auto;
@@ -32,69 +85,28 @@
   margin-bottom: 5px;
 }
 
-/* .input_title {
-  white-space: pre-line;
-} */
-
 .input_constraint2 {
-  color: #2196f3;
+  color: white;
   word-break: break-word;
   white-space: pre-wrap;
-  text-overflow: ellipsis;  
+  text-overflow: ellipsis;
 }
+
 .input_constraint1 {
-  color: #2196f3;
+  color: white;
 }
 
 .output_constraint1 {
-  color: #4caf50;
+  color: white;
 }
+
 .output_constraint2 {
-  color: #4caf50;
+  color: white;
   word-break: break-all;
   white-space: pre-wrap;
 }
 
 .input_box {
-  width: 400px;
-  height: 60px;
-  font-size: 20px;
-  padding: 20px;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.input_box:focus {
-  outline: none;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
-}
-
-.submit_button {
-  width: 200px;
-  height: 60px;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #ff5722;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.submit_button:hover {
-  background-color: #e64a19;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
-}
-
-.output_box {
   width: 400px;
   height: 100px;
   font-size: 20px;
@@ -103,37 +115,53 @@
   border-radius: 30px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
 }
 
-form {
+.output_box {
+  margin-top: 20px;
+  background-color: white;
+  width: 400px;
+  height: 100px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 20px;
+  justify-content: center;
 }
 
-.input_title2{
-    white-space: pre-line;
+.input_title2 {
+  white-space: pre-line;
 }
 
-.big_input_box {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  white-space: nowrap;
-}
-
+.big_input_box,
+.big_input_title,
 .big_output_box {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
   white-space: nowrap;
+  color: white;
 }
 
-.big_input_title {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  white-space: nowrap;
+.fancy_button {
+  font-size: 24px;
+  padding: 10px;
+  font-family: "Prime-Regular";
+  color: white;
+  height: 75px;
+  width: 80%;
+  border-radius: 1rem;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.fancy_button:hover {
+  color: black;
+  background-color: white;
+  transition: background-color 0.2s;
 }

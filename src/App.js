@@ -3,15 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Question1 from "./SlotQuestion/Question1";
 import Question2 from "./SlotQuestion/Question2";
 import Question3 from "./SlotQuestion/Question3";
+import QuestionFinal from "./SlotQuestion/QuestionFinal"
 import Slot1 from "./Slots/Slot1";
 import Slot2 from "./Slots/Slot2";
 import Slot3 from "./Slots/Slot3";
-// import Slot4 from "./Slots/Slot4";
-// import Slot5 from "./Slots/Slot5";
-// import Slot6 from "./Slots/Slot6";
-// import Slot7 from "./Slots/Slot7";
-// import Slot8 from "./Slots/Slot8";
-// import FinalRound from "./Q/FinalRound";
+
+import FinalRound from "./Slots/FinalRound";
 import Welcome from "./Welcome";
 function App() {
   // const navigate = useNavigate();
@@ -61,11 +58,11 @@ function App() {
             path="/round1/slot86qZ8wNtR1k/:id"
             element={<Question />}
           ></Route> */}
-          {/* <Route path="/finalround4vT9nGpJ7k" element={<FinalRound />}></Route>
+          <Route path="/finalround4vT9nGpJ7k" element={<FinalRound />}></Route>
           <Route
             path="/finalround4vT9nGpJ7k/:id"
-            element={<Question />}
-          ></Route> */}
+            element={<QuestionFinal />}
+          ></Route>
         </Routes>
       </Router>
     </>

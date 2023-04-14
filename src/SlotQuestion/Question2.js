@@ -104,45 +104,61 @@ const Question2 = () => {
     event.preventDefault();
   };
   return (
-    <div className={styles.container}>
-      <div className={styles.question_number}>Question {qnum}</div>
-      <div className={styles.constraints}>
-        <div className={styles.big_input_box}>
-          <div className={styles.input_constraint1}>Input :</div>
-          <div className={styles.input_constraint2}>{input}</div>
+    <>
+    <div>
+        <img
+          src="https://i.imgur.com/DxqfH2n.png"
+          alt="E-summit"
+          className={styles.logo2}
+        />
+      </div>
+      <div className={styles.heading}>Question {qnum}</div>
+      <div>
+        <img
+          src="https://i.imgur.com/UPzsKWH.png"
+          alt="E-summit"
+          className={styles.logo1}
+        />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.constraints}>
+          <div className={styles.big_input_box}>
+            <div className={styles.input_constraint1}>Input :</div>
+            <div className={styles.input_constraint2}>{input}</div>
+          </div>
+          <div className={styles.big_output_box}>
+            <div className={styles.output_constraint1}>Output :</div>
+            <div className={styles.output_constraint2}>{output}</div>
+          </div>
+          <div className={styles.big_input_title}>
+            <div className={styles.input_title1}>Constraint :</div>
+            <div className={styles.input_title2}>{constraint}</div>
+          </div>
         </div>
-        <div className={styles.big_output_box}>
-          <div className={styles.output_constraint1}>Output :</div>
-          <div className={styles.output_constraint2}>{output}</div>
-        </div>
-        <div className={styles.big_input_title}>
-          <div className={styles.input_title1}>Constraint :</div>
-          <div className={styles.input_title2}>{constraint}</div>
+        <div className={styles.form}>
+          <form onSubmit={formSubmit}>
+            <input
+              type="text"
+              className={styles.input_box}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              ref={inputref}
+            ></input>
+            <button
+              className={styles.fancy_button}
+              type="submit"
+              onClick={logic}
+            >
+              Submit
+            </button>
+            {/* <div>{warning ? "Empty input" : ""}</div> */}
+          </form>
+          <div className={styles.output_box}>
+            {warning ? "EMPTY INPUT" : answer}
+          </div>
         </div>
       </div>
-      <div className={styles.form}>
-        <form onSubmit={formSubmit}>
-          <input
-            type="text"
-            className={styles.input_box}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            ref={inputref}
-          ></input>
-          <button
-            className={styles.submit_button}
-            type="submit"
-            onClick={logic}
-          >
-            Submit
-          </button>
-          {/* <div>{warning ? "Empty input" : ""}</div> */}
-        </form>
-        <div className={styles.output_box}>
-          {warning ? "EMPTY INPUT" : answer}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 export default Question2;
