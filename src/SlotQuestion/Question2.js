@@ -1,36 +1,17 @@
 import { useRef, useState, React, useEffect } from "react";
 // import { ReactDOM } from "react-dom/client";
-import { Q1 } from "../Q/Q1";
-import { Q2 } from "../Q/Q2";
-import { Q3 } from "../Q/Q3";
-import { Q4 } from "../Q/Q4";
-import { Q5 } from "../Q/Q5";
+
 import { Q6 } from "../Q/Q6";
 import { Q7 } from "../Q/Q7";
-import { Q8 } from "../Q/Q8";
-import { Q9 } from "../Q/Q9";
-import { Q10 } from "../Q/Q10";
 import { Q11 } from "../Q/Q11";
-import { Q12 } from "../Q/Q12";
 import { Q13 } from "../Q/Q13";
-import { Q14 } from "../Q/Q14";
-import { Q15 } from "../Q/Q15";
-import { Q16 } from "../Q/Q16";
-import { Q17 } from "../Q/Q17";
-import { Q18 } from "../Q/Q18";
 import { Q19 } from "../Q/Q19";
-import { Q20 } from "../Q/Q20";
-import { Q21 } from "../Q/Q21";
-import { CheckIsInteger } from "../Logic/CheckIsInteger";
+
 import { CheckIsString } from "../Logic/CheckIsString";
-import { CheckIsBinaryString } from "../Logic/CheckIsBinaryString";
 import { CheckIsIntegerArray } from "../Logic/CheckIsIntegerArray";
 import { CheckIsTwoInteger } from "../Logic/CheckIsTwoInteger";
 import { CheckIsThreeInteger } from "../Logic/CheckIsThreeInteger";
-import { CheckIsNumberString } from "../Logic/CheckIsNumberString";
-import { CheckIsFourInteger } from "../Logic/CheckIsFourInteger";
 import styles from "../styles/question.module.css";
-import { Q22 } from "../Q/Q22";
 const Question2 = () => {
   const [answer, setAnswer] = useState(null);
   const [warning, setWarning] = useState(false);
@@ -55,96 +36,24 @@ const Question2 = () => {
         setWarning(false);
       }, 2000);
     } else if (qnum === "1") {
-      const boolAnswer = CheckIsInteger(val);
-      if (boolAnswer !== null) setAnswer(Q1(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "2") {
-      const boolAnswer = CheckIsString(val);
-      if (boolAnswer !== null) setAnswer(Q2(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "3") {
-      const boolAnswer = CheckIsBinaryString(val);
-      if (boolAnswer !== null) setAnswer(Q3(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "4") {
-      const boolAnswer = CheckIsIntegerArray(val);
-      if (boolAnswer !== null) setAnswer(Q4(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "5") {
-      const boolAnswer = CheckIsIntegerArray(val);
-      if (boolAnswer !== null) setAnswer(Q5(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "6") {
       const boolAnswer = CheckIsTwoInteger(val);
       if (boolAnswer !== null) setAnswer(Q6(boolAnswer));
       else setAnswer(IP);
-    } else if (qnum === "7") {
+    } else if (qnum === "2") {
       const boolAnswer = CheckIsString(val);
       if (boolAnswer !== null) setAnswer(Q7(boolAnswer));
       else setAnswer(IP);
-    } else if (qnum === "8") {
-      const boolAnswer = CheckIsInteger(val);
-      if (boolAnswer !== null) setAnswer(Q8(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "9") {
-      const boolAnswer = CheckIsIntegerArray(val);
-      if (boolAnswer !== null) setAnswer(Q9(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "10") {
-      const boolAnswer = CheckIsString(val);
-      if (boolAnswer !== null) setAnswer(Q10(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "11") {
+    } else if (qnum === "3") {
       const boolAnswer = CheckIsString(val);
       if (boolAnswer !== null) setAnswer(Q11(boolAnswer));
       else setAnswer(IP);
-    } else if (qnum === "12") {
-      const boolAnswer = CheckIsString(val);
-      if (boolAnswer !== null) setAnswer(Q12(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "13") {
+    } else if (qnum === "4") {
       const boolAnswer = CheckIsThreeInteger(val);
       if (boolAnswer !== null) setAnswer(Q13(boolAnswer));
       else setAnswer(IP);
-    } else if (qnum === "14") {
-      const boolAnswer = CheckIsNumberString(val);
-      if (boolAnswer !== null) setAnswer(Q14(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "15") {
-      const boolAnswer = CheckIsTwoInteger(val);
-      if (boolAnswer !== null) setAnswer(Q15(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "16") {
-      const boolAnswer = CheckIsInteger(val);
-      if (boolAnswer !== null) setAnswer(Q16(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "17") {
-      const boolAnswer = CheckIsThreeInteger(val);
-      if (boolAnswer !== null) setAnswer(Q17(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "18") {
-      const boolAnswer = CheckIsString(val);
-      if (boolAnswer !== null) setAnswer(Q18(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "19") {
+    } else if (qnum === "5") {
       const boolAnswer = CheckIsIntegerArray(val);
       if (boolAnswer !== null) setAnswer(Q19(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "20") {
-      const boolAnswer = CheckIsThreeInteger(val);
-      if (boolAnswer !== null) setAnswer(Q20(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "21") {
-      const boolAnswer = CheckIsBinaryString(val);
-      if (boolAnswer !== null) setAnswer(Q21(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "22") {
-      const boolAnswer = CheckIsTwoInteger(val);
-      if (boolAnswer !== null) setAnswer(Q22(boolAnswer));
-      else setAnswer(IP);
-    } else if(qnum === "23"){
-      const boolAnswer = CheckIsFourInteger(val);
-      if (boolAnswer !== null) setAnswer(Q22(boolAnswer));
       else setAnswer(IP);
     }
   };
@@ -157,98 +66,30 @@ const Question2 = () => {
 
   useEffect(() => {
     if (qnum === "1") {
-      setInput("A single line consists one integer N");
-      setOutput(
-        "Print a single string with characters ranging between '0' to '9'"
-      );
-      setConstraint("0 ≤ N ≤ 1e9");
-    } else if (qnum === "2") {
       setInput(
-        "A single string S consisting of lowercase letter of English Alphabets."
+        "A single line consists of two space-separated integers A and B "
       );
-      setOutput("Print 'YES' OR 'NO' ");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "3") {
-      setInput("A single string S consisting of '0's and '1's");
-      setOutput("Print a single string consisting '0's and '1's");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "4") {
-      setInput(
-        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
-      );
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
-    } else if (qnum === "5") {
-      setInput(
-        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
-      );
-      setOutput("Print a single integer");
-      setConstraint("4 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
-    } else if (qnum === "6") {
-      setInput("A single line consists of two space-separated integers A and B ");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B ≤ 1e9");
-    } else if (qnum === "7") {
+    } else if (qnum === "2") {
       setInput(
         "A single string S consisting of lowercase letter of English Alphabets."
       );
       setOutput("Print a single integer");
       setConstraint("0 ≤ |S| ≤ 1e5");
-    } else if (qnum === "8") {
-      setInput("A single line consists of an integer N");
-      setOutput("Print a single integer");
-      setConstraint("1 ≤ N ≤ 9000");
-    } else if (qnum === "9") {
-      setInput(
-        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
-      );
-      setOutput("Print a single integer");
-      setConstraint("2 ≤ n ≤ 1e5 \n0 ≤ A[i] ≤ 1e9, for all i");
-    } else if (qnum === "10") {
-      setInput(
-        "A single string S consisting of lowercase letter of English Alphabets."
-      );
-      setOutput("Print a single integer");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "11") {
+    } else if (qnum === "3") {
       setInput(
         "A single string S consisting of lowercase letter of English Alphabets."
       );
       setOutput("Print a single string");
       setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "12") {
+    } else if (qnum === "4") {
       setInput(
-        "A single string S consisting of lowercase letter of English Alphabets."
+        "A single line consists of three space-separated integers A,B,C"
       );
-      setOutput("Print a single string");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "13") {
-      setInput("A single line consists of three space-separated integers A, B, C");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B, C ≤ 1e9");
-    } else if (qnum === "14") {
-      setInput("A string S consisting of digits '0' to '9' ");
-      setOutput("Print a single integer");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "15") {
-      setInput("A single line consisting of two space-separated integers A and B");
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("0 ≤ A, B ≤ 1e9");
-    } else if (qnum === "16") {
-      setInput("A single line consisting of an integer A");
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("2 ≤ A ≤ 1e9");
-    } else if (qnum === "17") {
-      setInput("A single line consists of three space-separated integers A, B, C");
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("0 ≤ A, B, C ≤ 1e6");
-    } else if (qnum === "18") {
-      setInput(
-        "A string S consisting of lowercase letter of English alphabet."
-      );
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "19") {
+    } else if (qnum === "5") {
       setInput(
         "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
@@ -256,22 +97,6 @@ const Question2 = () => {
         "Print a single string consisting of lowercase letter of English Alphabets."
       );
       setConstraint("2 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
-    } else if (qnum === "20") {
-      setInput("A single line consists of three space-separated integers A, B, C");
-      setOutput("Print 'YES' OR 'NO'");
-      setConstraint("0 ≤ A, B, C ≤ 1e6");
-    } else if (qnum === "21") {
-      setInput("A single string S consisting of '0's and '1's");
-      setOutput("Print a single string consisting '0's and '1's");
-      setConstraint("1 ≤ |S| ≤ 1e5");
-    } else if (qnum === "22") {
-      setInput("A single line consisting of two space-separated integers A and B");
-      setOutput("Print a single integer");
-      setConstraint("1 ≤ A, B ≤ 1e6");
-    } else if(qnum === "23"){
-      setInput("A single line consisting of four space-separated integers A, B, C, D");
-      setOutput("Print a single integer");
-      setConstraint("1 ≤ A, B, C, D≤ 1e7");
     }
   }, [qnum]);
 

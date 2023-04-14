@@ -1,13 +1,18 @@
 export const Q23 = (val) => {
-  const [a, b, c, d] = val;
-  if (a > 1e7 || b > 1e7 || c > 1e7 || d > 1e7) return "INVALID INPUT";
-  if (a < 1 || b < 1 || c < 1 || d < 1) return "INVALID INPUT";
-  return a - b * c + d;
+  const [a, b] = val;
+  if (a > 1e9 || b > 1e9) return "INVALILD INPUT";
+  const c = a * b;
+  return c.toString().length;
 };
 
+/*
+setInput("A single line consisting of two space-separated integers A and B");
+setOutput("Print a single integer");
+setConstraint("1 ≤ A, B ≤ 1e9");
+*/
 
 /*
-setInput("A single line consisting of four space-separated integers A, B, C, D");
-setOutput("Print a single integer");
-setConstraint("1 ≤ A, B, C, D≤ 1e7");
+const boolAnswer = CheckIsTwoInteger(val);
+if (boolAnswer !== null) setAnswer(Q23(boolAnswer));
+else setAnswer(IP);
 */
