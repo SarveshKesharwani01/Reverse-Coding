@@ -31,7 +31,7 @@ import { CheckIsNumberString } from "../Logic/CheckIsNumberString";
 import { CheckIsFourInteger } from "../Logic/CheckIsFourInteger";
 import styles from "../styles/question.module.css";
 import { Q22 } from "../Q/Q22";
-const Question = () => {
+const Question3 = () => {
   const [answer, setAnswer] = useState(null);
   const [warning, setWarning] = useState(false);
   const [value, setValue] = useState("");
@@ -320,4 +320,4 @@ const Question = () => {
     </div>
   );
 };
-export default Question;
+export default Question3;

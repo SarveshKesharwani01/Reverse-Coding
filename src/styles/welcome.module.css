@@ -1,4 +1,86 @@
-.fancy_button {
+*{
+  overflow: hidden;
+}
+
+body::before{
+  content: '';
+  background-color: black;
+  background-image: url('https://i.imgur.com/4B3Yy23.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+@font-face {
+  font-family: "Prime-Regular";
+  src: url("../../fonts/Prime-Regular.ttf");
+}
+
+/* body {
+  background-image: url('https://i.imgur.com/XzhXque.png');
+  background-size: cover;
+} */
+
+.logo1{
+  height: 120px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo2{
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.heading {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Prime-Regular";
+  font-size: 90px;
+}
+
+.container {
+  margin-top: 50px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fancy_button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-family: 'Prime-Regular';
+  color: white;
+  height: 100px;
+  width: 25%;
+  border-radius: 1rem;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.fancy_button:hover{
+  color: black;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+
+/* .fancy_button {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -36,10 +118,4 @@
 .fancy_button:hover:before {
   opacity: 1;
   transform: scale(2.5);
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
-}
+} */

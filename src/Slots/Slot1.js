@@ -4,17 +4,31 @@ import styles from "../styles/slot.module.css";
 const Slot1 = () => {
   const navigate = useNavigate();
   const QuestionList = [];
-  for (let i = 1; i <= 25; i++) {
+  for (let i = 1; i <= 5; i++) {
     QuestionList.push(`Question${i}`);
   }
   let pathname = window.location.pathname;
 
   return (
     <>
-      <div className={styles.center}>Slot {pathname.substring(12, 13)}</div>
+      <div>
+        <img
+          src="https://i.imgur.com/DxqfH2n.png"
+          alt="E-summit"
+          className={styles.logo2}
+        />
+      </div>
+      <div>
+        <img
+          src="https://i.imgur.com/UPzsKWH.png"
+          alt="E-summit"
+          className={styles.logo1}
+        />
+      </div>
+      <div className={styles.heading}>Slot {pathname.substring(12, 13)}</div>
       <div className={styles.container}>
         {QuestionList.map((question, index) => (
-          <div key={index}>
+          <div className={styles.item} key={index}>
             <button
               className={styles.fancy_button}
               key={index}
