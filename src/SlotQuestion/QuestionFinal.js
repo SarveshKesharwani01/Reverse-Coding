@@ -133,6 +133,14 @@ const QuestionFinal = () => {
             <div className={styles.input_constraint1}>Input :</div>
             <div className={styles.input_constraint2}>{input}</div>
           </div>
+          {qnum === "3" ? (
+            <div className={styles.big_input_box}>
+              <div className={styles.input_constraint1}>Hint :</div>
+              <div className={styles.input_constraint2}>Vowels</div>
+            </div>
+          ) : (
+            <></>
+          )}
           <div className={styles.big_output_box}>
             <div className={styles.output_constraint1}>Output :</div>
             <div className={styles.output_constraint2}>{output}</div>
