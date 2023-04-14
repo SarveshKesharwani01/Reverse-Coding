@@ -164,13 +164,13 @@ const Question = () => {
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "4") {
       setInput(
-        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "5") {
       setInput(
-        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
       setOutput("Print a single integer");
       setConstraint("4 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
@@ -190,7 +190,7 @@ const Question = () => {
       setConstraint("1 ≤ N ≤ 9000");
     } else if (qnum === "9") {
       setInput(
-        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
       setOutput("Print a single integer");
       setConstraint("2 ≤ n ≤ 1e5 \n0 ≤ A[i] ≤ 1e9, for all i");
@@ -240,7 +240,7 @@ const Question = () => {
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "19") {
       setInput(
-        "A single line containing n+1 integers, first integer will be size of the array A followed by array A of length n. "
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
       );
       setOutput(
         "Print a single string consisting of lowercase letter of English Alphabets."
@@ -273,7 +273,7 @@ const Question = () => {
           <div className={styles.output_constraint2}>{output}</div>
         </div>
         <div className={styles.big_input_title}>
-          <div className={styles.input_title1}>Contsraint :</div>
+          <div className={styles.input_title1}>Constraint :</div>
           <div className={styles.input_title2}>{constraint}</div>
         </div>
       </div>
