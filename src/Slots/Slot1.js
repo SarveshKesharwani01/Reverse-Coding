@@ -4,7 +4,7 @@ import styles from "../styles/slot.module.css";
 const Slot1 = () => {
   const navigate = useNavigate();
   const QuestionList = [];
-  for (let i = 1; i <= 21; i++) {
+  for (let i = 1; i <= 25; i++) {
     QuestionList.push(`Question${i}`);
   }
   let pathname = window.location.pathname;

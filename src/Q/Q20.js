@@ -12,7 +12,7 @@ export const Q20 = (val) => {
   */
   
   /*
-        setInput("A single line consists of three integers A, B, C");
+        setInput("A single line consists of three space-separated integers A, B, C");
         setOutput("Print 'YES' OR 'NO'");
         setConstraint("0 ≤ A, B, C ≤ 1e6");
   */

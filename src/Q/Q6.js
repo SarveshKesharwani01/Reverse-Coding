@@ -19,7 +19,7 @@ const boolAnswer = CheckIsTwoInteger(val);
 */
 
 /*
-      setInput("A single line consists of 2 integers A and B ");
+      setInput("A single line consists of two space-separated integers A and B ");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B ≤ 1e9");
 */

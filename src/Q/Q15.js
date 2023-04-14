@@ -18,7 +18,7 @@ const boolAnswer = CheckIsTwoInteger(val);
       else setAnswer(IP);
       */
 /*
-      setInput("A single line consisting of two integers A and B");
+      setInput("A single line consisting of two space-separated integers A and B");
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B ≤ 1e9");
 */

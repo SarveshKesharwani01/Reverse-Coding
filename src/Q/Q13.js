@@ -15,7 +15,7 @@ const boolAnswer = CheckIsThreeInteger(val);
       else setAnswer(IP);
       */
 /*
-      setInput("A single line consists of three integers A,B,C");
+      setInput("A single line consists of three space-separated integers A,B,C");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B, C ≤ 1e9");
 */

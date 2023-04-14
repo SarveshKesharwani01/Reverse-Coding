@@ -29,6 +29,7 @@ import { CheckIsTwoInteger } from "../Logic/CheckIsTwoInteger";
 import { CheckIsThreeInteger } from "../Logic/CheckIsThreeInteger";
 import { CheckIsNumberString } from "../Logic/CheckIsNumberString";
 import styles from "../styles/question.module.css";
+import { Q22 } from "../Q/Q22";
 const Question = () => {
   const [answer, setAnswer] = useState(null);
   const [warning, setWarning] = useState(false);
@@ -136,6 +137,10 @@ const Question = () => {
       const boolAnswer = CheckIsBinaryString(val);
       if (boolAnswer !== null) setAnswer(Q21(boolAnswer));
       else setAnswer(IP);
+    } else if (qnum === "22") {
+      const boolAnswer = CheckIsTwoInteger(val);
+      if (boolAnswer !== null) setAnswer(Q22(boolAnswer));
+      else setAnswer(IP);
     }
   };
 
@@ -175,7 +180,7 @@ const Question = () => {
       setOutput("Print a single integer");
       setConstraint("4 ≤ n ≤ 1e5 \n n % 2 == 0 \n0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "6") {
-      setInput("A single line consists of 2 integers A and B ");
+      setInput("A single line consists of two space-separated integers A and B ");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "7") {
@@ -213,7 +218,7 @@ const Question = () => {
       setOutput("Print a single string");
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "13") {
-      setInput("A single line consists of three integers A,B,C");
+      setInput("A single line consists of three space-separated integers A, B, C");
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B, C ≤ 1e9");
     } else if (qnum === "14") {
@@ -221,7 +226,7 @@ const Question = () => {
       setOutput("Print a single integer");
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "15") {
-      setInput("A single line consisting of two integers A and B");
+      setInput("A single line consisting of two space-separated integers A and B");
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "16") {
@@ -229,7 +234,7 @@ const Question = () => {
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("2 ≤ A ≤ 1e9");
     } else if (qnum === "17") {
-      setInput("A single line consists of three integers A,B,C");
+      setInput("A single line consists of three space-separated integers A, B, C");
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B, C ≤ 1e6");
     } else if (qnum === "18") {
@@ -247,13 +252,17 @@ const Question = () => {
       );
       setConstraint("2 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "20") {
-      setInput("A single line consists of three integers A,B,C");
+      setInput("A single line consists of three space-separated integers A, B, C");
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B, C ≤ 1e6");
     } else if (qnum === "21") {
       setInput("A single string S consisting of '0's and '1's");
       setOutput("Print a single string consisting '0's and '1's");
       setConstraint("1 ≤ |S| ≤ 1e5");
+    } else if (qnum === "22") {
+      setInput("A single line consisting of two space-separated integers A and B");
+      setOutput("Print a single integer");
+      setConstraint("1 ≤ A, B ≤ 1e6");
     }
   }, [qnum]);
 
