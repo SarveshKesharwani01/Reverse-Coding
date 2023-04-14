@@ -274,7 +274,7 @@ const Question = () => {
       <div className={styles.question_number}>Question {qnum}</div>
       <div className={styles.constraints}>
         <div className={styles.big_input_box}>
-          <div className={styles.input_constraint1}>INPUT :</div>
+          <div className={styles.input_constraint1}>Input :</div>
           <div className={styles.input_constraint2}>{input}</div>
         </div>
         <div className={styles.big_output_box}>
