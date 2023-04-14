@@ -245,7 +245,7 @@ const Question = () => {
       setOutput(
         "Print a single string consisting of lowercase letter of English Alphabets."
       );
-      setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
+      setConstraint("2 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     } else if (qnum === "20") {
       setInput("A single line consists of three integers A,B,C");
       setOutput("Print 'YES' OR 'NO'");
