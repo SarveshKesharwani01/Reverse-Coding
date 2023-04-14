@@ -22,12 +22,12 @@ const Welcome = () => {
       </div>
       <div className={styles.heading}>Reverse Coding</div>
       <div className={styles.container}>
-        {/* <button
+        <button
           className={styles.fancy_button}
           onClick={() => navigate("/round1/slot13bU6xKpR9j")}
         >
           Slot 1
-        </button> */}
+        </button>
         {/* <button
           className={styles.fancy_button}
           onClick={() => navigate("/round1/slot27cE2hLmN5v")}
@@ -70,12 +70,12 @@ const Welcome = () => {
       >
         Slot 8
       </button> */}
-        <button
+        {/* <button
           className={styles.fancy_button}
           onClick={() => navigate("/finalround4vT9nGpJ7k")}
         >
           Final Round
-        </button>
+        </button> */}
       </div>
     </>
   );
