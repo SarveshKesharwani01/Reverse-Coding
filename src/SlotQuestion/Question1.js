@@ -83,7 +83,7 @@ const Question = () => {
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "4") {
       setInput("A single line consisting of an integer A");
-      setOutput("Print 'YES' OR 'NO'");
+      setOutput("Print a single string containing lowercase English Alphabets");
       setConstraint("2 ≤ A ≤ 1e9");
     } else if (qnum === "5") {
       setInput(
