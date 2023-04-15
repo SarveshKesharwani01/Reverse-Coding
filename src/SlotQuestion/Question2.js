@@ -2,7 +2,7 @@ import { useRef, useState, React, useEffect } from "react";
 // import { ReactDOM } from "react-dom/client";
 
 import { Q6 } from "../Q/Q6";
-import { Q7 } from "../Q/Q7";
+import { Q14 } from "../Q/Q14";
 import { Q11 } from "../Q/Q11";
 import { Q13 } from "../Q/Q13";
 import { Q19 } from "../Q/Q19";
@@ -11,6 +11,7 @@ import { CheckIsString } from "../Logic/CheckIsString";
 import { CheckIsIntegerArray } from "../Logic/CheckIsIntegerArray";
 import { CheckIsTwoInteger } from "../Logic/CheckIsTwoInteger";
 import { CheckIsThreeInteger } from "../Logic/CheckIsThreeInteger";
+import { CheckIsNumberString } from "../Logic/CheckIsNumberString";
 import styles from "../styles/question.module.css";
 const Question2 = () => {
   const [answer, setAnswer] = useState(null);
@@ -40,8 +41,8 @@ const Question2 = () => {
       if (boolAnswer !== null) setAnswer(Q6(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "2") {
-      const boolAnswer = CheckIsString(val);
-      if (boolAnswer !== null) setAnswer(Q7(boolAnswer));
+      const boolAnswer = CheckIsNumberString(val);
+      if (boolAnswer !== null) setAnswer(Q14(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "3") {
       const boolAnswer = CheckIsString(val);
@@ -72,11 +73,9 @@ const Question2 = () => {
       setOutput("Print a single integer");
       setConstraint("0 ≤ A, B ≤ 1e9");
     } else if (qnum === "2") {
-      setInput(
-        "A single string S consisting of lowercase letter of English Alphabets."
-      );
+      setInput("A string S consisting of digits '0' to '9' ");
       setOutput("Print a single integer");
-      setConstraint("0 ≤ |S| ≤ 1e5");
+      setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "3") {
       setInput(
         "A single string S consisting of lowercase letter of English Alphabets."
@@ -105,7 +104,7 @@ const Question2 = () => {
   };
   return (
     <>
-    <div>
+      <div>
         <img
           src="https://i.imgur.com/DxqfH2n.png"
           alt="E-summit"
