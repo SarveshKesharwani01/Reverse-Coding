@@ -3,9 +3,9 @@ import { useRef, useState, React, useEffect } from "react";
 import { Q2 } from "../Q/Q2";
 import { Q15 } from "../Q/Q15";
 import { Q18 } from "../Q/Q18";
+import { Q9 } from "../Q/Q9";
 import { Q20 } from "../Q/Q20";
 import { Q22 } from "../Q/Q22";
-import { Q24 } from "../Q/Q24";
 import { CheckIsThreeInteger } from "../Logic/CheckIsThreeInteger";
 import { CheckIsString } from "../Logic/CheckIsString";
 import { CheckIsTwoInteger } from "../Logic/CheckIsTwoInteger";
@@ -47,16 +47,16 @@ const QuestionFinal = () => {
       if (boolAnswer !== null) setAnswer(Q18(boolAnswer));
       else setAnswer(IP);
     } else if (qnum === "4") {
+      const boolAnswer = CheckIsIntegerArray(val);
+      if (boolAnswer !== null) setAnswer(Q9(boolAnswer));
+      else setAnswer(IP);
+    } else if (qnum === "5") {
       const boolAnswer = CheckIsThreeInteger(val);
       if (boolAnswer !== null) setAnswer(Q20(boolAnswer));
       else setAnswer(IP);
-    } else if (qnum === "5") {
+    } else if (qnum === "6") {
       const boolAnswer = CheckIsTwoInteger(val);
       if (boolAnswer !== null) setAnswer(Q22(boolAnswer));
-      else setAnswer(IP);
-    } else if (qnum === "6") {
-      const boolAnswer = CheckIsIntegerArray(val);
-      if (boolAnswer !== null) setAnswer(Q24(boolAnswer));
       else setAnswer(IP);
     }
   };
@@ -88,22 +88,22 @@ const QuestionFinal = () => {
       setConstraint("1 ≤ |S| ≤ 1e5");
     } else if (qnum === "4") {
       setInput(
+        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
+      );
+      setOutput("Print a single integer");
+      setConstraint("2 ≤ n ≤ 1e5 \n0 ≤ A[i] ≤ 1e9, for all i");
+    } else if (qnum === "5") {
+      setInput(
         "A single line consists of three space-separated integers A, B, C"
       );
       setOutput("Print 'YES' OR 'NO'");
       setConstraint("0 ≤ A, B, C ≤ 1e6");
-    } else if (qnum === "5") {
+    } else if (qnum === "6") {
       setInput(
         "A single line consisting of two space-separated integers A and B"
       );
       setOutput("Print a single integer");
       setConstraint("1 ≤ A, B ≤ 1e6");
-    } else if (qnum === "6") {
-      setInput(
-        "A single line containing n+1 space-separated integers, first integer will be size of the array A followed by array A of length n. "
-      );
-      setOutput("Print a single string containing alphanumeric characters.");
-      setConstraint("1 ≤ n ≤ 1e5 \n 0 ≤ A[i] ≤ 1e9, for all i ");
     }
   }, [qnum]);
 
